@@ -1,0 +1,32 @@
+@import "../../css/global.scss";
+
+.footer {
+  background-color: $second;
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+  padding: 2% 5%;
+  box-shadow: 0 0 1px $second;
+  align-items: center;
+  text-align: center;
+  justify-content: space-around;
+
+  h2 {
+    color: $main;
+    font-weight: normal;
+    font-size: min(max(1rem, 2vw), 1.1rem)
+  }
+
+  ul {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    li,
+    li a {
+      text-decoration: none;
+      list-style: none;
+      font-size: min(max(0.7rem, 2vw),0.9rem);
+      color: $main1;
+    }
+  }
+}

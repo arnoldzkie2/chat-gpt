@@ -1,0 +1,118 @@
+@import "../../css/global.scss";
+
+.contact {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 6%;
+  background-color: $main1;
+
+  .contact-text {
+    padding: 30px;
+    width: 50%;
+
+    h1 {
+      color: $second;
+      font-weight: 900;
+      font-size: 2.8rem;
+    }
+    
+    h2 {
+      color: $second;
+      font-weight: 900;
+      font-size: 2rem;
+    }
+
+    p {
+      margin-top: 10px;
+      color: $second1;
+    }
+  }
+  form {
+    background-color: $main;
+    width: 400px;
+    height: 400px;
+    padding: 20px 30px;
+    border-radius: 2px;
+    box-shadow: 0 0 1px $second;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    h1 {
+      color: $second;
+      margin-bottom: 10px;
+      font-weight: 700;
+      text-align: center;
+    }
+
+    input {
+      width: 100%;
+      height: 40px;
+      padding: 0 10px;
+      background: transparent;
+      color: $second1;
+      border: none;
+      border-bottom: 1px solid gray;
+      outline: none;
+
+      &:focus {
+        outline: 2px solid $second;
+      }
+    }
+
+    textarea {
+      height: 60%;
+      outline: none;
+      color: $second;
+      resize: none;
+      border: none;
+      line-height: 1.3;
+      font-size: 1rem;
+      background-color: transparent;
+      border-bottom: 1px solid $second;
+      padding: 10px;
+      &:focus {
+        outline: 2px solid $second;
+      }
+    }
+  }
+
+  button {
+    height: 50px;
+    border: none;
+    font-size: 1.2rem;
+    margin-top: 5px;
+    color: $accent;
+    transition: 0.3s;
+    background-color: $accent;
+    cursor: pointer;
+    color: $main;
+    border-radius: 2px;
+
+    &:hover {
+      background-color: $accent;
+    }
+  }
+}
+
+
+@media (max-width: 720px) {
+  .contact {
+    flex-direction: column;
+
+
+    .contact-text {
+      width: 100%;
+      text-align: center;
+    }
+
+    form {
+      h1 {
+        font-size: 1.5rem;
+      }
+      width: 80vw;
+    }
+  }
+}

@@ -1,0 +1,111 @@
+@import '../../css/global.scss';
+
+.header {
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    position: fixed;
+    top: 0;
+    transition: 0.3s;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    padding: 10px 1%;
+    h1 {
+        color: $main;
+        transition: 0.3s;
+        font-weight: 900;
+        width: 250px;
+        font-size: min(max(2.5rem, 3vw),2.8rem);
+        letter-spacing: -1px;
+    }
+
+    ul {
+        display: flex;
+        list-style: none;
+        width: 62%;
+        align-items: center;
+        transition: 0.3s;
+        gap: 1%;
+        li {
+            padding: 0 10px;
+            width: 90px;
+            display: flex;
+            justify-content: center;
+            font-size: min(max(1rem, 2vw), 1.1rem);
+            align-items: center;
+            height: 35px;
+            border-radius: 2px;
+            transition: 0.2s;
+            cursor: pointer;
+            &:hover{
+                background-color: $accent;
+                color: $main;
+            }
+
+        &:last-child {
+            margin-left: auto;
+        }
+        }
+    }
+    .nav-btn {
+        padding: 8px 10px;
+        cursor: pointer;
+        background-color: transparent; 
+        border: none;
+        color: $main;
+        font-size: 28px;
+        display: none;
+        outline: none;
+        transition: 0.7s;
+      }
+
+}
+
+@media (max-width: 720px) {
+    .header {
+        justify-content: space-around;
+        ul {
+            position: fixed;
+            top: 0;
+            right: 0;
+            background-color: $main;
+            height: 100%;
+            display: flex;
+            transform: translateX(100%);
+            width: 100vw;
+            padding-left: 5%;
+            flex-direction: column;
+            transition: 0.8s;
+            li {
+                color: $second;
+                font-size: 2rem;
+                margin: 7px 0;
+                width: 100vw;
+                justify-content: flex-start;
+                height: 45px;
+                &:last-child {
+                    margin: 7px 0;
+                    padding: 0 6%;
+                }
+            }
+          }
+        .nav-btn {
+            display: block;
+            color: $accent;
+            font-size: 1.8rem;
+        }
+
+        .nav-close-btn {
+            width: 100%;
+            text-align: right;
+            padding: 5% 10% 0 5%;
+        }
+    }
+
+    .header .toggle-nav{
+        transition: 0.7s;
+        transform: none;
+      }
+}

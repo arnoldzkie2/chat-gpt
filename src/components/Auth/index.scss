@@ -1,0 +1,99 @@
+@import "../../css/global.scss";
+
+.auth-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  .auth {
+    position: relative;
+  }
+  i {
+    position: absolute;
+    right: 20px;
+    z-index: 999;
+    animation: showAuth 1s forwards;
+    font-size: 1.5rem;
+    top: 15px;
+    cursor: pointer;
+    color: $accent;
+  }
+  .auth-wrapper {
+    animation: showAuth 0.3s forwards;
+    background-color: $main;
+    padding: 30px;
+    display: flex;
+    width: 90vw;
+    max-width: 450px;
+    border-radius: 3px;
+    flex-direction: column;
+    position: relative;
+    
+    h1 {
+      color: $second1;
+      text-align: center;
+      font-weight: 900;
+      letter-spacing: -1px;
+      margin-bottom: 15px;
+      font-size: 3rem;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      .auth-two {
+        display: flex;
+        gap: 10px;
+      }
+      input {
+        width: 100%;
+        padding: 10px;
+        font-size: min(max(0.85rem, 1vw), 1rem);
+        border: none;
+        color: $second1;
+        box-shadow: 0 0 1px $second1;
+        outline: none;
+      }
+
+      button {
+        height: 40px;
+        margin: 15px 0;
+        border: 1px solid $accent;
+        background-color: $main;
+        font-size: 1.2rem;
+        cursor: pointer;
+        border-radius: 2px;
+      }
+    }
+
+    .auth-footer {
+      text-align: center;
+      margin-top: 10px;
+      color: $second;
+      width: 100%;
+      span {
+        margin-left: 5px;
+        text-decoration: none;
+        color: $main;
+        cursor: pointer;
+        background-color: $accent;
+        padding: 2px 5px;
+      }
+    }
+  }
+}
+
+
+@keyframes showAuth {
+  from {
+    transform: scale(0);
+  } to {
+    transform: scale(1);
+  }
+}
